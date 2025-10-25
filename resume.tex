@@ -1,0 +1,168 @@
+\documentclass[a4paper,11pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+
+% Page layout
+\geometry{
+    left=0.75in,
+    right=0.75in,
+    top=0.75in,
+    bottom=0.75in
+}
+
+% Colors
+\definecolor{mainblue}{RGB}{0,102,204}
+\definecolor{darkgray}{RGB}{64,64,64}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=mainblue,
+    urlcolor=mainblue,
+    pdftitle={Abhijith Warrier - Resume},
+    pdfauthor={Abhijith Warrier}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\Large\bfseries\color{mainblue}}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Custom commands
+\newcommand{\resumeSubheading}[4]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & #2 \\
+        \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItem}[1]{
+    \item\small{#1}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Huge\bfseries\color{darkgray} Abhijith Warrier} \\[5pt]
+    \small
+    \faPhone\ +1-XXX-XXX-XXXX ~|~
+    \faEnvelope\ \href{mailto:abhijith.warrier@example.com}{abhijith.warrier@example.com} ~|~
+    \faLinkedin\ \href{https://linkedin.com/in/abhijithwarrier}{linkedin.com/in/abhijithwarrier} ~|~
+    \faGithub\ \href{https://github.com/abhijithwrrr}{github.com/abhijithwrrr}
+\end{center}
+
+\vspace{-10pt}
+
+% Professional Summary
+\section{Professional Summary}
+Experienced Android Mobile Developer with 3+ years of expertise in building high-quality, user-centric mobile applications. Proficient in Kotlin and Jetpack Compose with a strong focus on modern Android development practices. Proven track record of delivering scalable and maintainable applications while collaborating effectively with cross-functional teams.
+
+% Technical Skills
+\section{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Programming Languages:} Kotlin, Java
+    \item \textbf{Mobile Development:} Android SDK, Jetpack Compose, XML Layouts, Material Design
+    \item \textbf{Architecture \& Patterns:} MVVM, MVI, Clean Architecture, Repository Pattern
+    \item \textbf{Jetpack Libraries:} Compose, Navigation, ViewModel, LiveData, Room, DataStore, WorkManager, Hilt/Dagger
+    \item \textbf{Networking:} Retrofit, OkHttp, REST APIs, GraphQL
+    \item \textbf{Asynchronous Programming:} Kotlin Coroutines, Flow, RxJava
+    \item \textbf{Testing:} JUnit, Mockito, Espresso, Compose UI Testing
+    \item \textbf{Tools \& Technologies:} Android Studio, Git, Gradle, Firebase, CI/CD, Figma
+    \item \textbf{Other:} SOLID Principles, Agile/Scrum, Code Review, Performance Optimization
+\end{itemize}
+
+% Professional Experience
+\section{Professional Experience}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+    {Senior Android Developer}{Jan 2023 -- Present}
+    {Tech Solutions Inc.}{San Francisco, CA}
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Led the migration of legacy XML-based UI to modern Jetpack Compose, improving development velocity by 40\% and reducing UI-related bugs by 30\%.}
+        \resumeItem{Architected and developed a real-time messaging feature using Kotlin Coroutines and Flow, serving over 100K active users with 99.9\% uptime.}
+        \resumeItem{Implemented MVVM architecture with Clean Architecture principles, resulting in 50\% improvement in code maintainability and testability.}
+        \resumeItem{Integrated Firebase Analytics and Crashlytics to monitor app performance, reducing crash rate from 2.5\% to 0.3\%.}
+        \resumeItem{Mentored 2 junior developers on Kotlin best practices and Jetpack Compose development patterns.}
+    \end{itemize}
+
+    \resumeSubheading
+    {Android Developer}{Jun 2021 -- Dec 2022}
+    {Mobile Innovations Ltd.}{New York, NY}
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Developed and maintained 3 production Android applications using Kotlin, serving a combined user base of 200K+ users.}
+        \resumeItem{Implemented offline-first architecture using Room database and DataStore, improving app reliability in low-connectivity scenarios.}
+        \resumeItem{Optimized app performance by identifying and resolving memory leaks, reducing ANR rate by 60\%.}
+        \resumeItem{Collaborated with UI/UX designers to implement pixel-perfect Material Design interfaces, achieving 4.5+ star rating on Google Play Store.}
+        \resumeItem{Integrated RESTful APIs using Retrofit and implemented proper error handling and retry mechanisms.}
+    \end{itemize}
+\end{itemize}
+
+% Projects
+\section{Key Projects}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{FinanceTracker Pro} -- Personal finance management app built with Jetpack Compose
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Developed fully in Jetpack Compose with Material 3 Design, featuring dynamic theming and animations.}
+        \resumeItem{Implemented local data persistence with Room and encrypted SharedPreferences for sensitive information.}
+        \resumeItem{Created custom charts and visualizations using Compose Canvas API for expense tracking.}
+    \end{itemize}
+    
+    \item \textbf{FitLife Health} -- Fitness tracking application with real-time workout monitoring
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Integrated Google Fit API and Health Connect for comprehensive health data aggregation.}
+        \resumeItem{Implemented background location tracking using WorkManager for outdoor activity tracking.}
+        \resumeItem{Built custom UI components in Jetpack Compose for workout timers and progress indicators.}
+    \end{itemize}
+    
+    \item \textbf{Social Connect} -- Social networking app with real-time chat functionality
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Developed real-time messaging using Firebase Realtime Database and Cloud Firestore.}
+        \resumeItem{Implemented image upload and compression using Coil and CameraX libraries.}
+        \resumeItem{Utilized Hilt for dependency injection, ensuring modular and testable codebase.}
+    \end{itemize}
+\end{itemize}
+
+% Education
+\section{Education}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \resumeSubheading
+    {Bachelor of Technology in Computer Science}{Sep 2017 -- May 2021}
+    {University of Technology}{India}
+    \begin{itemize}[leftmargin=0.15in]
+        \resumeItem{Relevant Coursework: Data Structures, Algorithms, Mobile Computing, Software Engineering}
+        \resumeItem{Final Year Project: Android-based Campus Navigation System using Google Maps API}
+    \end{itemize}
+\end{itemize}
+
+% Certifications
+\section{Certifications \& Achievements}
+
+\begin{itemize}[leftmargin=0.15in, label={}]
+    \item \textbf{Associate Android Developer} -- Google (2022)
+    \item \textbf{Kotlin for Android Developers} -- Udacity (2021)
+    \item Published 2 open-source Android libraries on GitHub with 500+ combined stars
+    \item Speaker at Android Developer Meetup: "Modern Android Development with Jetpack Compose"
+\end{itemize}
+
+\end{document}
