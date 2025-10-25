@@ -9,13 +9,14 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{fontawesome}
+\usepackage{array}
 
 % Page layout
 \geometry{
-    left=0.75in,
-    right=0.75in,
-    top=0.75in,
-    bottom=0.75in
+    left=0.6in,
+    right=0.6in,
+    top=0.6in,
+    bottom=0.6in
 }
 
 % Colors
@@ -33,24 +34,24 @@
 
 % Section formatting
 \titleformat{\section}
-    {\Large\bfseries\color{mainblue}}
+    {\large\bfseries\color{mainblue}}
     {}
     {0em}
     {}
     [\titlerule]
 
-\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\section}{0pt}{10pt}{6pt}
 
 % Remove page numbers
 \pagestyle{empty}
 
 % Custom commands
 \newcommand{\resumeSubheading}[4]{
-    \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & #2 \\
+    \vspace{2pt}\item
+    \begin{tabular*}{\textwidth}[t]{@{\extracolsep{\fill}} l r}
+        \textbf{#1} & \textit{#2} \\
         \textit{#3} & \textit{#4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{2pt}
 }
 
 \newcommand{\resumeItem}[1]{
@@ -61,116 +62,109 @@
 
 % Header
 \begin{center}
-    {\Huge\bfseries\color{darkgray} Abhijith Warrier} \\[5pt]
+    {\LARGE\bfseries\color{darkgray} Abhijith Warrier} \\[4pt]
+    {\small Senior Android Developer \quad $|$ \quad Kotlin \& Jetpack Compose Specialist} \\[6pt]
     \small
-    \faPhone\ +91-8606844667 ~|~
-    \faEnvelope\ \href{mailto:warrierabhijith@gmail.com}{warrierabhijith@gmail.com} ~|~
-    \faLinkedin\ \href{https://www.linkedin.com/in/abhijith-warrier/}{https://www.linkedin.com/in/abhijith-warrier/} ~|~
+    \faPhone\ +91-8606844667 \quad
+    \faEnvelope\ \href{mailto:warrierabhijith@gmail.com}{warrierabhijith@gmail.com} \quad
+    \faLinkedin\ \href{https://www.linkedin.com/in/abhijith-warrier/}{linkedin.com/in/abhijith-warrier} \quad
     \faGithub\ \href{https://github.com/abhijithwrrr}{github.com/abhijithwrrr}
 \end{center}
 
-\vspace{-10pt}
+\vspace{4pt}
 
 % Professional Summary
 \section{Professional Summary}
-Experienced Android Mobile Developer with 3+ years of expertise in building high-quality, user-centric mobile applications. Proficient in Kotlin and Jetpack Compose with a strong focus on modern Android development practices. Proven track record of delivering scalable and maintainable applications while collaborating effectively with cross-functional teams.
+Experienced Android Developer with 3+ years building scalable, user-centered mobile applications. Deep expertise in Kotlin, Jetpack Compose, modern Android architectures (MVVM/MVI/Clean Architecture), and production-grade tooling. Track record of delivering high-quality releases, improving performance, and mentoring engineers in fast-paced teams.
 
 % Technical Skills
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Programming Languages:} Kotlin, Java
-    \item \textbf{Mobile Development:} Android SDK, Jetpack Compose, XML Layouts, Material Design
+\begin{itemize}[leftmargin=0.12in, label={}]
+    \item \textbf{Languages:} Kotlin, Java
+    \item \textbf{Frameworks / Libraries:} Jetpack Compose, Android SDK, Material3, Retrofit, OkHttp, Room, DataStore, WorkManager, Hilt/Dagger
     \item \textbf{Architecture \& Patterns:} MVVM, MVI, Clean Architecture, Repository Pattern
-    \item \textbf{Jetpack Libraries:} Compose, Navigation, ViewModel, LiveData, Room, DataStore, WorkManager, Hilt/Dagger
-    \item \textbf{Networking:} Retrofit, OkHttp, REST APIs, GraphQL
-    \item \textbf{Asynchronous Programming:} Kotlin Coroutines, Flow, RxJava
-    \item \textbf{Testing:} JUnit, Mockito, Espresso, Compose UI Testing
-    \item \textbf{Tools \& Technologies:} Android Studio, Git, Gradle, Firebase, CI/CD, Figma
-    \item \textbf{Other:} SOLID Principles, Agile/Scrum, Code Review, Performance Optimization
+    \item \textbf{Concurrency / Data:} Kotlin Coroutines, Flow, RxJava
+    \item \textbf{Testing \& CI:} JUnit, Mockito, Espresso, Compose UI Testing, CI/CD
+    \item \textbf{Tools:} Android Studio, Gradle, Git, Firebase, Figma
+    \item \textbf{Other:} REST/GraphQL, Performance Optimization, SOLID, Agile/Scrum
 \end{itemize}
 
 % Professional Experience
 \section{Professional Experience}
-
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.12in]
     \resumeSubheading
     {Senior Android Developer}{Jan 2023 -- Present}
     {Tech Solutions Inc.}{San Francisco, CA}
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Led the migration of legacy XML-based UI to modern Jetpack Compose, improving development velocity by 40\% and reducing UI-related bugs by 30\%.}
-        \resumeItem{Architected and developed a real-time messaging feature using Kotlin Coroutines and Flow, serving over 100K active users with 99.9\% uptime.}
-        \resumeItem{Implemented MVVM architecture with Clean Architecture principles, resulting in 50\% improvement in code maintainability and testability.}
-        \resumeItem{Integrated Firebase Analytics and Crashlytics to monitor app performance, reducing crash rate from 2.5\% to 0.3\%.}
-        \resumeItem{Mentored 2 junior developers on Kotlin best practices and Jetpack Compose development patterns.}
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Led migration from XML to Jetpack Compose, increasing UI development velocity by ~40\% and reducing UI-related defects by ~30\%.}
+        \resumeItem{Architected and implemented real-time messaging using Kotlin Coroutines and Flow; supported 100K+ active users with 99.9\% uptime.}
+        \resumeItem{Applied MVVM + Clean Architecture to improve code maintainability and testability (estimated 50\% improvement).}
+        \resumeItem{Integrated Firebase Analytics and Crashlytics to monitor releases; reduced crash rate from 2.5\% to 0.3\%.}
+        \resumeItem{Mentored junior developers on Kotlin and Compose best practices; led code reviews and design discussions.}
     \end{itemize}
 
     \resumeSubheading
     {Android Developer}{Jun 2021 -- Dec 2022}
     {Mobile Innovations Ltd.}{New York, NY}
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Developed and maintained 3 production Android applications using Kotlin, serving a combined user base of 200K+ users.}
-        \resumeItem{Implemented offline-first architecture using Room database and DataStore, improving app reliability in low-connectivity scenarios.}
-        \resumeItem{Optimized app performance by identifying and resolving memory leaks, reducing ANR rate by 60\%.}
-        \resumeItem{Collaborated with UI/UX designers to implement pixel-perfect Material Design interfaces, achieving 4.5+ star rating on Google Play Store.}
-        \resumeItem{Integrated RESTful APIs using Retrofit and implemented proper error handling and retry mechanisms.}
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Developed and maintained three production Android apps in Kotlin serving 200K+ combined users.}
+        \resumeItem{Designed offline-first data layer using Room and DataStore to improve reliability in low-connectivity scenarios.}
+        \resumeItem{Identified and fixed memory leaks and performance issues; reduced ANR rate by ~60\%.}
+        \resumeItem{Collaborated with designers to deliver pixel-perfect Material Design interfaces; apps achieved 4.5+ Play Store ratings.}
+        \resumeItem{Integrated REST APIs with Retrofit and implemented robust error handling and retry strategies.}
     \end{itemize}
 \end{itemize}
 
 % Projects
-\section{Key Projects}
-
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{FinanceTracker Pro} -- Personal finance management app built with Jetpack Compose
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Developed fully in Jetpack Compose with Material 3 Design, featuring dynamic theming and animations.}
-        \resumeItem{Implemented local data persistence with Room and encrypted SharedPreferences for sensitive information.}
-        \resumeItem{Created custom charts and visualizations using Compose Canvas API for expense tracking.}
+\section{Selected Projects}
+\begin{itemize}[leftmargin=0.12in, label={}]
+    \item \textbf{FinanceTracker Pro} \quad Personal finance app (Jetpack Compose)
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Built UI with Jetpack Compose and Material 3, including dynamic theming and animations.}
+        \resumeItem{Persisted data with Room and encrypted SharedPreferences for sensitive data.}
+        \resumeItem{Implemented custom charts using Compose Canvas for expense visualizations.}
     \end{itemize}
     
-    \item \textbf{FitLife Health} -- Fitness tracking application with real-time workout monitoring
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Integrated Google Fit API and Health Connect for comprehensive health data aggregation.}
-        \resumeItem{Implemented background location tracking using WorkManager for outdoor activity tracking.}
-        \resumeItem{Built custom UI components in Jetpack Compose for workout timers and progress indicators.}
+    \item \textbf{FitLife Health} \quad Fitness tracking with real-time monitoring
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Integrated Google Fit API and Health Connect for health data aggregation.}
+        \resumeItem{Implemented background location tracking via WorkManager for outdoor activities.}
+        \resumeItem{Created custom Compose components for timers and progress indicators.}
     \end{itemize}
     
-    \item \textbf{Social Connect} -- Social networking app with real-time chat functionality
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Developed real-time messaging using Firebase Realtime Database and Cloud Firestore.}
-        \resumeItem{Implemented image upload and compression using Coil and CameraX libraries.}
-        \resumeItem{Utilized Hilt for dependency injection, ensuring modular and testable codebase.}
+    \item \textbf{Social Connect} \quad Social app with real-time chat
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Implemented real-time messaging with Firebase Realtime Database and Firestore.}
+        \resumeItem{Handled image upload and compression using Coil and CameraX.}
+        \resumeItem{Used Hilt for DI to keep code modular and testable.}
     \end{itemize}
 \end{itemize}
 
 % Education
 \section{Education}
-
-\begin{itemize}[leftmargin=0.15in, label={}]
+\begin{itemize}[leftmargin=0.12in, label={}]
     \resumeSubheading
     {Bachelor of Computer Applications}{Sep 2017 -- May 2021}
     {Bharathiar University}{India}
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Relevant Coursework: Data Structures, Algorithms, Mobile Computing, Software Engineering}
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Relevant coursework: Data Structures, Algorithms, Mobile Computing, Software Engineering.}
     \end{itemize}
-\end{itemize}
 
-\begin{itemize}[leftmargin=0.15in, label={}]
     \resumeSubheading
     {Bachelor of Arts, English}{Sep 2017 -- May 2021}
     {Rabindranath Tagore University}{India}
-    \begin{itemize}[leftmargin=0.15in]
-        \resumeItem{Final Year Project: Android-based Campus Navigation System using Google Maps API}
+    \begin{itemize}[leftmargin=0.18in]
+        \resumeItem{Final project: Android-based Campus Navigation System using Google Maps API.}
     \end{itemize}
 \end{itemize}
 
 % Certifications
 \section{Certifications \& Achievements}
-
-\begin{itemize}[leftmargin=0.15in, label={}]
-    \item \textbf{Associate Android Developer} -- Google (2022)
-    \item \textbf{Kotlin for Android Developers} -- Udacity (2021)
-    \item Published 2 open-source Android libraries on GitHub with 500+ combined stars
-    \item Speaker at Android Developer Meetup: "Modern Android Development with Jetpack Compose"
+\begin{itemize}[leftmargin=0.12in, label={}]
+    \item Associate Android Developer -- Google (2022)
+    \item Kotlin for Android Developers -- Udacity (2021)
+    \item Published two open-source Android libraries on GitHub (500+ combined stars)
+    \item Speaker: "Modern Android Development with Jetpack Compose" at Android Developer Meetup
 \end{itemize}
 
 \end{document}
