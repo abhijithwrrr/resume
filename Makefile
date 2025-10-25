@@ -1,4 +1,4 @@
-.PHONY: all clean view
+.PHONY: all clean view clean-all help
 
 # Default target
 all: resume.pdf
